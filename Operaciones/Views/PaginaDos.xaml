@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Operaciones.Views.PaginaDos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding respuesta}"
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   TextColor="CornflowerBlue"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   x:Name="LblRespuesta"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

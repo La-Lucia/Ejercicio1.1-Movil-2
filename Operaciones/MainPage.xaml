@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Operaciones.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="CornflowerBlue" Padding="24" CornerRadius="0">
+            <Label Text="Ejercicio 1.1" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Label Text="Numero 1" FontSize="Default" Padding="10,10,0,5"/>
+        <Entry x:Name="n1" Placeholder="Ingrese el primer numero" Keyboard="Numeric" Margin="5,5,5,5"/>
+
+        <Label Text="Numero 2" FontSize="Default" Padding="10,5,0,5"/>
+        <Entry x:Name="n2" Placeholder="Ingrese el segundo numero" Keyboard="Numeric" Margin="5,5,5,10"/>
+
+        <Button Text="Sumar" x:Name="BtnSumar" Clicked="BtnSumar_Clicked" BackgroundColor="CornflowerBlue" TextColor="White" Margin="5,5,5,5"/>
+        <Button Text="Restar" x:Name="BtnRestar" Clicked="BtnRestar_Clicked" BackgroundColor="CornflowerBlue" TextColor="White" Margin="5,0,5,5"/>
+        <Button Text="Multiplicar" x:Name="BtnMultiplicar" Clicked="BtnMultiplicar_Clicked" BackgroundColor="CornflowerBlue" TextColor="White" Margin="5,0,5,5"/>
+        <Button Text="Dividir" x:Name="BtnDividir" Clicked="BtnDividir_Clicked" BackgroundColor="CornflowerBlue" TextColor="White" Margin="5,0,5,5"/>
+        
+    </StackLayout>
+
+</ContentPage>
