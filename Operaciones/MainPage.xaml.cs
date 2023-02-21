@@ -20,56 +20,97 @@ namespace Operaciones
 
         private async void BtnSumar_Clicked(object sender, EventArgs e)
         {
-            convertir();
-            var respuesta = new Models.Respuesta
+            if (verificar() == true)
             {
-                respuesta = "Respuesta: " + Sumar(num1, num2).ToString()
-            };
+                convertir();
+                var respuesta = new Models.Respuesta
+                {
+                    respuesta = "Respuesta: " + Sumar(num1, num2).ToString()
+                };
 
-            var pagina = new Views.PaginaDos();
-            pagina.BindingContext = respuesta;
-            await Navigation.PushAsync(pagina);
+                var pagina = new Views.PaginaDos();
+                pagina.BindingContext = respuesta;
+                await Navigation.PushAsync(pagina);
+            }
+            else
+            {
+
+                await DisplayAlert("Aviso", "Llene todos los campos", "Aceptar");
+
+            }
         }
 
         private async void BtnRestar_Clicked(object sender, EventArgs e)
         {
-            convertir();
-            var respuesta = new Models.Respuesta
+            if (verificar() == true)
             {
-                respuesta = "Respuesta: " + Restar(num1, num2).ToString()
-            };
 
-            var pagina = new Views.PaginaDos();
-            pagina.BindingContext = respuesta;
-            await Navigation.PushAsync(pagina);
+                convertir();
+                var respuesta = new Models.Respuesta
+                {
+                    respuesta = "Respuesta: " + Restar(num1, num2).ToString()
+                };
 
-        }
+                var pagina = new Views.PaginaDos();
+                pagina.BindingContext = respuesta;
+                await Navigation.PushAsync(pagina);
+
+            }
+            else
+            {
+
+                await DisplayAlert("Aviso", "Llene todos los campos", "Aceptar");
+
+            }
+
+            }
 
         private async void BtnMultiplicar_Clicked(object sender, EventArgs e)
         {
-            convertir();
-            var respuesta = new Models.Respuesta
+            if (verificar() == true)
             {
-                respuesta = "Respuesta: " + Multiplicar(num1, num2).ToString()
-            };
+                convertir();
+                var respuesta = new Models.Respuesta
+                {
+                    respuesta = "Respuesta: " + Multiplicar(num1, num2).ToString()
+                };
 
-            var pagina = new Views.PaginaDos();
-            pagina.BindingContext = respuesta;
-            await Navigation.PushAsync(pagina);
+                var pagina = new Views.PaginaDos();
+                pagina.BindingContext = respuesta;
+                await Navigation.PushAsync(pagina);
 
-        }
+            }
+
+            else
+            {
+
+                await DisplayAlert("Aviso", "Llene todos los campos", "Aceptar");
+
+            }
+
+            }
 
         private async void BtnDividir_Clicked(object sender, EventArgs e)
         {
-            convertir();
-            var respuesta = new Models.Respuesta
+            if (verificar() == true)
             {
-                respuesta = "Respuesta: " + Dividir(num1, num2).ToString()
-            };
+                convertir();
+                var respuesta = new Models.Respuesta
+                {
+                    respuesta = "Respuesta: " + Dividir(num1, num2).ToString()
+                };
 
-            var pagina = new Views.PaginaDos();
-            pagina.BindingContext = respuesta;
-            await Navigation.PushAsync(pagina);
+                var pagina = new Views.PaginaDos();
+                pagina.BindingContext = respuesta;
+                await Navigation.PushAsync(pagina);
+
+            }
+            else
+            {
+
+                await DisplayAlert("Aviso", "Llene todos los campos", "Aceptar");
+
+            }
 
         }
 
@@ -105,6 +146,23 @@ namespace Operaciones
             Double dividir = n1 / n2;
 
             return dividir;
+        }
+
+        public bool verificar() {
+            Boolean v;
+
+            if ((String.IsNullOrEmpty(n1.Text)) || (String.IsNullOrEmpty(n1.Text)))
+            {
+                v = false;
+            }
+            else {
+
+                v = true;
+            
+            }
+
+            return v;
+        
         }
 
     }

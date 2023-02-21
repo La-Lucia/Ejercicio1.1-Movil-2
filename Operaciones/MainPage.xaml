@@ -4,7 +4,7 @@
              x:Class="Operaciones.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="CornflowerBlue" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#6495ED" Padding="24" CornerRadius="0">
             <Label Text="Ejercicio 1.1" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 

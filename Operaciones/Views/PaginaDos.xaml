@@ -7,7 +7,7 @@
             <Label Text="{Binding respuesta}"
                    FontSize="20" 
                    FontAttributes="Bold"
-                   TextColor="CornflowerBlue"
+                   TextColor="#6495ED"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                    x:Name="LblRespuesta"/>

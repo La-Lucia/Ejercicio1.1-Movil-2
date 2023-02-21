@@ -10,7 +10,7 @@ namespace Operaciones
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage()) {BarBackgroundColor = Color.FromHex("#6495ED")};
         }
 
         protected override void OnStart()
